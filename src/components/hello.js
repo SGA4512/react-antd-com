@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import './hello.css';
+import '../../assets/hello.css';
 
 /**
  * @author hui

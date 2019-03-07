@@ -1,31 +1,42 @@
 {
   "name": "react-antd-com",
-  "version": "1.0.1",
+  "version": "1.0.2-1",
   "description": "基于antd的项目使用封装公共组件",
   "main": "lib/index.js",
+  "private": false,
   "scripts": {
-    "build": "webpack --progress",
-    "watch": "webpack --watch --progress",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "xxx"
+    "url": "git@github.com:huiBuiling/react-antd-com.git"
   },
   "keywords": [
-    "react","antd"
+    "react",
+    "antd"
+  ],
+  "files": [
+    "README.md",
+    "lib/",
+    "assets/"
   ],
   "author": "hui",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.0.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "react": "^16.2.0",
-    "style-loader": "^0.20.3",
-    "webpack": "^4.2.0",
-    "webpack-cli": "^3.1.2"
+    "style-loader": "^0.20.3"
+  },
+  "dependencies": {
+    "antd": "^3.14.1",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0"
   }
 }
