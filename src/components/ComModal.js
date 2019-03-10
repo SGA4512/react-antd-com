@@ -1,10 +1,9 @@
 import React,{ Component } from "react"
-import {Modal,Button} from 'antd';
+import {Modal,Button} from 'antd'
 
 /**
  * @author hui
- * @date 2019/3/6
- * @Description: 模态（Model）
+ * @Description: Modal(对话框）
 */
 export default class MyModal extends Modal {
     render(){
