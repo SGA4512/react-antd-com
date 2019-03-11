@@ -3,7 +3,6 @@ import {message, Button } from 'antd';
 import Upload from 'rc-upload';
 
 /**
- * @author zhanglei
  * @date 2018
  * @Description: Upload(ie9)
  */

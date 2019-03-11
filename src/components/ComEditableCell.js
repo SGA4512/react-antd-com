@@ -2,12 +2,8 @@ import React,{ Component } from "react";
 import { Input, Icon } from 'antd';
 
 /**
- * @author lijiasong
- * @time 2018/5/4
- * @Description: table编辑
- *
  * @time 2018/09/29
- * @Description: 调整为不点check，全部保存
+ * @Description: table编辑,调整为不点check，全部保存
  */
 export default class EditableCell extends Component {
     state = {
