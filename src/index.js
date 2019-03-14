@@ -29,7 +29,7 @@ export { default as ComSelect} from './components/ComSelect';
 export { default as ComUpload} from './components/ComUpload';
 
 //工具类
-export * from './utils/AxiosUtil';
+export { default as AxiosUtil} from './utils/AxiosUtil';
 export { default as UrlUtil} from './utils/UrlUtil';
 export { default as CookieUtil} from './utils/CookieUtil';
 
