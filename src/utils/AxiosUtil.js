@@ -11,7 +11,7 @@ axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded
 axios.defaults.headers.put['X-Requested-With'] = 'XMLHttpRequest';//Ajax put请求标识
 axios.defaults.headers.delete['X-Requested-With'] = 'XMLHttpRequest';//Ajax delete请求标识
 
-export function query(url, params) {
+function query(url, params) {
     return new Promise((resolve, reject) => {
         axios.get(`${prefix}${url}`, {params: params}).then(res => {
             resolve(res.data)
@@ -22,7 +22,7 @@ export function query(url, params) {
 }
 
 //post请求会有post参数也可能有get参数
-export function post(url, datas, params) {
+function post(url, datas, params) {
     return new Promise((resolve, reject) => {
         axios.post(`${prefix}${url}`,datas,{params:params}).then(res => {
             resolve(res.data)
@@ -32,7 +32,7 @@ export function post(url, datas, params) {
     })
 }
 
-export function insert(url, datas, params) {
+function insert(url, datas, params) {
     return new Promise((resolve, reject) => {
         axios.post(`${prefix}${url}`, datas,{params:params}).then(res => {
             resolve(res.data)
@@ -42,7 +42,7 @@ export function insert(url, datas, params) {
     })
 }
 
-export function update(url, datas, params) {
+function update(url, datas, params) {
     return new Promise((resolve, reject) => {
         axios.post(`${prefix}${url}`, datas,{params:params}).then(res => {
             resolve(res.data)
@@ -52,7 +52,7 @@ export function update(url, datas, params) {
     })
 }
 
-export function remove(url, datas, params) {
+function remove(url, datas, params) {
     return new Promise((resolve, reject) => {
         axios.post(`${prefix}${url}`, datas,{params:params}).then(res => {
             resolve(res.data)
@@ -62,7 +62,7 @@ export function remove(url, datas, params) {
     })
 }
 
-export function requestAll(...paramsFun) {
+function requestAll(...paramsFun) {
     return new Promise((resolve, reject) => {
         axios.all(...paramsFun).then(axios.spread(function (...response) {
             let responseList = [];
@@ -82,8 +82,7 @@ export function requestAll(...paramsFun) {
     })
 }
 
-
-export function deletes(url, params){
+function deletes(url, params){
     return new Promise((resolve, reject) => {
         axios.post(`${prefix}${url}` + "/delete", params, {
             headers: {
@@ -96,3 +95,5 @@ export function deletes(url, params){
         })
     })
 }
+
+export default {query, post, insert, update, remove, requestAll, deletes}
