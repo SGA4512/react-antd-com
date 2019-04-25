@@ -1,13 +1,12 @@
 {
   "name": "react-antd-com",
-  "version": "1.0.2-2",
+  "version": "1.0.3",
   "description": "基于antd的项目使用封装公共组件",
   "main": "lib/index.js",
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir lib",
-    "prepublish": "npm run build"
+    "build": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",

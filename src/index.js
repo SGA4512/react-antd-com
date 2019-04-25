@@ -4,13 +4,10 @@ if (ENV !== 'production' && ENV !== 'test' && typeof console !== 'undefined' && 
 }
 
 /**
- * @author hui
  * @date 2019/3/7
- * @Description: 导出文件
-     * table：ComTable | ComTableHover | ComEditableCell | ComNumEditableCell | CommonEditTable | ComColumnsLen
-     * antd：ComModal | ComPortal | ComPromptModal | ComSelect | ComUpload
-     * 导入导出：CommonImportBox | ComExportColumns
-     * 工具类：* | UrlUtil | CookieUtil
+ * @Description:
+     * table：ComTable | ComTableHover | ComEditableCell | ComColumnsLen
+     * antd：ComModal | ComPortal | ComPromptModal | ComSelect
      * 測試：Hello
  */
 
@@ -26,11 +23,7 @@ export { default as ComModal} from './components/ComModal';
 export { default as ComPortal} from './components/ComPortal';
 export { default as ComPromptModal} from './components/ComPromptModal';
 export { default as ComSelect} from './components/ComSelect';
-export { default as ComUpload} from './components/ComUpload';
 
 //工具类
 export { default as AxiosUtil} from './utils/AxiosUtil';
-export { default as UrlUtil} from './utils/UrlUtil';
-export { default as CookieUtil} from './utils/CookieUtil';
-
 export { default as Hello } from './components/Hello.js';
