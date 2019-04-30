@@ -1,6 +1,6 @@
 {
-  "name": "react-antd-com",
-  "version": "1.0.3",
+  "name": "react-antd-common",
+  "version": "1.0.0",
   "description": "基于antd的项目使用封装公共组件",
   "main": "lib/index.js",
   "private": false,

@@ -2,7 +2,8 @@ import React,{ Component } from "react";
 import { Input, Icon } from 'antd';
 
 /**
- * @time 2018/09/29
+ * @author hui
+ * @date 2018
  * @Description: table编辑,调整为不点check，全部保存
  */
 export default class EditableCell extends Component {
@@ -14,10 +15,6 @@ export default class EditableCell extends Component {
     handleChange = (e) => {
         const value = e.target.value;
         this.setState({ value });
-        /*let flag = this.props.flag;
-        if (flag) {
-            this.props.onChange(value);
-        }*/
         this.props.onChange(value);
     }
 
@@ -58,11 +55,6 @@ export default class EditableCell extends Component {
                                 onChange={this.handleChange}
                                 onPressEnter={this.check}
                             />
-                            {/*<Icon
-                                type="check"
-                                className="editable-cell-icon-check"
-                                onClick={this.check}
-                            />*/}
                         </div>
                         :
                         <div className="editable-cell-text-wrapper">

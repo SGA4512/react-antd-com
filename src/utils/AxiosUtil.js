@@ -1,8 +1,7 @@
 import axios from "axios";
-const prefix = 'http://192.168.1.103:5000';
+const prefix = 'xxxxx';
 const indexUrl = '/home/';
 const logoutPath = '/signOut';
-const maxTimeoutTime = 7200000; //30min
 
 axios.defaults.withCredentials = true;
 axios.defaults.headers.get['X-Requested-With'] = 'XMLHttpRequest';//Ajax get请求标识
@@ -25,36 +24,6 @@ function query(url, params) {
 function post(url, datas, params) {
     return new Promise((resolve, reject) => {
         axios.post(`${prefix}${url}`,datas,{params:params}).then(res => {
-            resolve(res.data)
-        }).catch(err => {
-            reject(err.data)
-        })
-    })
-}
-
-function insert(url, datas, params) {
-    return new Promise((resolve, reject) => {
-        axios.post(`${prefix}${url}`, datas,{params:params}).then(res => {
-            resolve(res.data)
-        }).catch(err => {
-            reject(err.data)
-        })
-    })
-}
-
-function update(url, datas, params) {
-    return new Promise((resolve, reject) => {
-        axios.post(`${prefix}${url}`, datas,{params:params}).then(res => {
-            resolve(res.data)
-        }).catch(err => {
-            reject(err.data)
-        })
-    })
-}
-
-function remove(url, datas, params) {
-    return new Promise((resolve, reject) => {
-        axios.post(`${prefix}${url}`, datas,{params:params}).then(res => {
             resolve(res.data)
         }).catch(err => {
             reject(err.data)
@@ -96,4 +65,4 @@ function deletes(url, params){
     })
 }
 
-export default {query, post, insert, update, remove, requestAll, deletes}
+export default {query, post, requestAll, deletes}

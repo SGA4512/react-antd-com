@@ -1,15 +1,15 @@
-# react-antd-com
+# react-antd-common
 
 测试react组件发布到npm
 
 ## 安装
 
-npm install react-antd-com --save
+npm install react-antd-common --save
 
 
 ### 使用
 
-import { Hello,ComModal } from "react-antd-com";
+import { Hello,ComModal } from "react-antd-common";
 
 
 ### 按需加载
@@ -18,7 +18,7 @@ import { Hello,ComModal } from "react-antd-com";
 
 ['import', [
     {libraryName: 'antd', style:true },
-    {libraryName: 'react-antd-com', libraryDirectory: 'lib/components'}
+    {libraryName: 'react-antd-common', libraryDirectory: 'lib/components'}
 ]]
 
 
@@ -32,6 +32,6 @@ import { Hello,ComModal } from "react-antd-com";
 中间的问题就是部分导出组件不理想，导致无法引用（不过是指用yarn link方式直接本地是ok的哦）
 
 使用的是直接连接网址的方式 
-eg:"react-antd-com": "git+http://user:ped@github.com:huiBuiling/react-antd-com.git#master"
+eg:"react-antd-common": "git+http://user:ped@github.com:huiBuiling/react-antd-com.git#master"
 
 

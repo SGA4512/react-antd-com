@@ -7,7 +7,7 @@ if (ENV !== 'production' && ENV !== 'test' && typeof console !== 'undefined' && 
  * @date 2019/3/7
  * @Description:
      * table：ComTable | ComTableHover | ComEditableCell | ComColumnsLen
-     * antd：ComModal | ComPortal | ComPromptModal | ComSelect
+     * antd：ComModal | ComPortalCon | ComPromptModal | ComSelect
      * 測試：Hello
  */
 
@@ -20,7 +20,7 @@ export { default as ComColumnsLen} from './components/ComColumnsLen';
 
 //antd
 export { default as ComModal} from './components/ComModal';
-export { default as ComPortal} from './components/ComPortal';
+export { default as ComPortalCon} from './components/ComPortal/ComPortalCon.js';
 export { default as ComPromptModal} from './components/ComPromptModal';
 export { default as ComSelect} from './components/ComSelect';
 
